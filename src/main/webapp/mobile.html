@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 500px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+	<div class="form-container">
+        <h1>Enter Mobile Details</h1>
+       <form action="submitMobileDetails" method="POST">
+            <table>
+                <tr>
+                    <th><label for="mobileId">Mobile ID:</label></th>
+                    <td><input type="text" id="mobileId" name="mobile_Id" required autofocus></td>
+                </tr>
+                <tr>
+                    <th><label for="mobileName">Mobile Name:</label></th>
+                    <td><input type="text" id="mobileName" name="mobile_Name" required></td>
+                </tr>
+                <tr>
+                    <th><label for="mobileColor">Mobile Color:</label></th>
+                    <td><input type="text" id="mobileColor" name="mobile_Color" required></td>
+                </tr>
+                <tr>
+                    <th><label for="mobilePrice">Mobile Price:</label></th>
+                    <td><input type="text" id="mobilePrice" name="mobile_Price" step="0.01" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
